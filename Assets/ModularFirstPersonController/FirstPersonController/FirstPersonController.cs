@@ -21,6 +21,7 @@ public class FirstPersonController : MonoBehaviour
     #region Camera Movement Variables
 
     public Camera playerCamera;
+    public GameObject Gun;
 
     public float fov = 60f;
     public bool invertCamera = false;
@@ -224,6 +225,7 @@ public class FirstPersonController : MonoBehaviour
 
             transform.localEulerAngles = new Vector3(0, yaw, 0);
             playerCamera.transform.localEulerAngles = new Vector3(pitch, 0, 0);
+            Gun.transform.localEulerAngles = new Vector3(pitch, 0, 0);
         }
 
         #region Camera Zoom
@@ -559,6 +561,8 @@ public class FirstPersonController : MonoBehaviour
         EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
         GUILayout.Label("Camera Setup", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontStyle = FontStyle.Bold, fontSize = 13 }, GUILayout.ExpandWidth(true));
         EditorGUILayout.Space();
+
+        fpc.Gun = (GameObject)EditorGUILayout.ObjectField(new GUIContent("Gun", "Gun object to be used for aiming."), fpc.Gun, typeof(GameObject), true);
 
         fpc.playerCamera = (Camera)EditorGUILayout.ObjectField(new GUIContent("Camera", "Camera attached to the controller."), fpc.playerCamera, typeof(Camera), true);
         fpc.fov = EditorGUILayout.Slider(new GUIContent("Field of View", "The camera’s view angle. Changes the player camera directly."), fpc.fov, fpc.zoomFOV, 179f);
