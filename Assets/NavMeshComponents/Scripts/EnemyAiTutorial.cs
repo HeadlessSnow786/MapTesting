@@ -4,6 +4,8 @@ using UnityEngine.AI;
 
 public class EnemyAiTutorial : MonoBehaviour
 {
+
+    
     public NavMeshAgent agent;
 
     public Transform player;
@@ -25,6 +27,11 @@ public class EnemyAiTutorial : MonoBehaviour
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+
+    private void Start()
+    {
+        
+    }
 
     private void Awake()
     {
