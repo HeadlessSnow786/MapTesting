@@ -1481,7 +1481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &549970565
 Light:
   m_ObjectHideFlags: 0
@@ -4980,6 +4980,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 304934591}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1001 &2057922019
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3887186422799287891, guid: f8398cb04faf59646897e58a6ca0eb61, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.691805
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887186422799287891, guid: f8398cb04faf59646897e58a6ca0eb61, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887186422799287891, guid: f8398cb04faf59646897e58a6ca0eb61, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.603184
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887186422799287891, guid: f8398cb04faf59646897e58a6ca0eb61, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710695
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887186422799287891, guid: f8398cb04faf59646897e58a6ca0eb61, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887186422799287891, guid: f8398cb04faf59646897e58a6ca0eb61, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710665
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887186422799287891, guid: f8398cb04faf59646897e58a6ca0eb61, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887186422799287891, guid: f8398cb04faf59646897e58a6ca0eb61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887186422799287891, guid: f8398cb04faf59646897e58a6ca0eb61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887186422799287891, guid: f8398cb04faf59646897e58a6ca0eb61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4519889821058735337, guid: f8398cb04faf59646897e58a6ca0eb61, type: 3}
+      propertyPath: m_Name
+      value: The Boss
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8398cb04faf59646897e58a6ca0eb61, type: 3}
 --- !u!1001 &2094261408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5529,3 +5586,4 @@ SceneRoots:
   - {fileID: 2094261408}
   - {fileID: 423776345}
   - {fileID: 549970566}
+  - {fileID: 2057922019}
