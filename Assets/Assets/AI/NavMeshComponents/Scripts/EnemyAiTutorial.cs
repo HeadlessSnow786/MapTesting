@@ -33,11 +33,11 @@ public class EnemyAiTutorial : MonoBehaviour
         
     }
 
-    private void Awake()
-    {
-        player = GameObject.Find("PlayerObj").transform;
-        agent = GetComponent<NavMeshAgent>();
-    }
+    /// private void Awake()
+    // {
+       // player = GameObject.Find("PlayerObj").transform;
+       // agent = GetComponent<NavMeshAgent>();
+    //}
 
     private void Update()
     {
