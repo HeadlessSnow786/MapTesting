@@ -1,16 +1,19 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.SceneManagement;
 
 public class EnemyAiTutorial : MonoBehaviour
 {
+
+    
     public NavMeshAgent agent;
 
     public Transform player;
 
-    public GameObject PlayerObj;
-
     public LayerMask whatIsGround, whatIsPlayer;
+
+    public float health;
+
     //Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -19,10 +22,16 @@ public class EnemyAiTutorial : MonoBehaviour
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+    public GameObject projectile;
 
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+
+    private void Start()
+    {
+        
+    }
 
     /// private void Awake()
     // {
@@ -39,7 +48,6 @@ public class EnemyAiTutorial : MonoBehaviour
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInAttackRange && playerInSightRange) AttackPlayer();
-
     }
 
     private void Patroling()
@@ -82,8 +90,9 @@ public class EnemyAiTutorial : MonoBehaviour
         if (!alreadyAttacked)
         {
             ///Attack code here
-            SceneManager.LoadScene("GameOver");
-            Cursor.lockState = CursorLockMode.None;
+            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
             ///End of attack code
 
             alreadyAttacked = true;
@@ -93,6 +102,17 @@ public class EnemyAiTutorial : MonoBehaviour
     private void ResetAttack()
     {
         alreadyAttacked = false;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+    }
+    private void DestroyEnemy()
+    {
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()
