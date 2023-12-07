@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 1a686dc77c606418088cd12768b6052a, type: 2}
 --- !u!1 &4790
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,7 +2550,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &624647663
 MeshCollider:
@@ -5169,23 +5169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fe6678cb1670b4bb4de5dd7ee8d999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 1253480888}
-  player: {fileID: 1877825284}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 128
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
-  health: 0
-  walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 120
-  timeBetweenAttacks: 0.5
-  projectile: {fileID: 0}
-  sightRange: 16
-  attackRange: 0.01
-  playerInSightRange: 1
-  playerInAttackRange: 1
 --- !u!114 &1253480887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5198,13 +5181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03bc8063c9e95401f9a8a38bc716750d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Method: 2
-  m_Curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!195 &1253480888
 NavMeshAgent:
   m_ObjectHideFlags: 0
