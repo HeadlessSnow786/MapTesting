@@ -100,6 +100,7 @@ public class EnemyAI : MonoBehaviour
     IEnumerator deathRoutine()
     {
         yield return new WaitForSeconds(jumpscareTime);
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene(2);
     }
 }
