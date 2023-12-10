@@ -7,6 +7,9 @@ public class Flashlight : MonoBehaviour
     [SerializeField] GameObject luminant;
     private bool isOn = false;
 
+    public AudioSource audioSource;
+    public AudioClip lightOn, lightOff;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,14 @@ public class Flashlight : MonoBehaviour
         {
             isOn = !isOn;
             luminant.gameObject.SetActive(isOn);
+            if (isOn == true)
+            {
+                audioSource.PlayOneShot(lightOn);
+            }
+            else if (isOn == false)
+            {
+                audioSource.PlayOneShot(lightOff);
+            }
         }
     }
 }
