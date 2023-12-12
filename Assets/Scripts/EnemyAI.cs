@@ -19,6 +19,10 @@ public class EnemyAI : MonoBehaviour
     public Vector3 rayCastOffset;
     public string deathScene;
 
+    // Audio Control 
+    public AudioSource audioSource;
+    public AudioClip chaseSound, jumpscareSound;
+
     void Start()
     {
         walking = true;
@@ -90,6 +94,7 @@ public class EnemyAI : MonoBehaviour
     }
     IEnumerator chaseRoutine()
     {
+        audioSource.PlayOneShot(chaseSound);
         chaseTime = Random.Range(minChaseTime, maxChaseTime);
         yield return new WaitForSeconds(chaseTime);
         walking = true;
@@ -99,6 +104,7 @@ public class EnemyAI : MonoBehaviour
     }
     IEnumerator deathRoutine()
     {
+        audioSource.PlayOneShot(jumpscareSound);
         yield return new WaitForSeconds(jumpscareTime);
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene(2);

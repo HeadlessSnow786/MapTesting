@@ -45,7 +45,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.94910395, g: 0.972549, b: 0.63529414, a: 1}
   m_Intensity: 3
-  m_Range: 25
+  m_Range: 35
   m_SpotAngle: 45
   m_InnerSpotAngle: 1
   m_CookieSize: 10
@@ -791,6 +791,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luminant: {fileID: 1284350587915660754}
+  audioSource: {fileID: 0}
+  lightOn: {fileID: 0}
+  lightOff: {fileID: 0}
 --- !u!114 &7298011390989790377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -829,7 +832,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6786655781296212288}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88571dab8b35d4986bd57c94d47728a1, type: 3}
   m_Name: 
@@ -848,7 +851,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6786655781296212288}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4e2a4358e02d4f30bac5028d43ad851, type: 3}
   m_Name: 
