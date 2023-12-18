@@ -91,6 +91,7 @@ public class EnemyAI : MonoBehaviour
     }
     IEnumerator chaseRoutine()
     {
+        //Unfinished Audio System
         //AudioSource.PlayOneShot("Spotted");
         chaseTime = Random.Range(minChaseTime, maxChaseTime);
         yield return new WaitForSeconds(chaseTime);
@@ -101,6 +102,7 @@ public class EnemyAI : MonoBehaviour
     }
     IEnumerator deathRoutine()
     {
+        //Unfinished Audio System
         //AudioManager.instance.PlaySFX("Jumpscare");
         yield return new WaitForSeconds(jumpscareTime);
         Cursor.lockState = CursorLockMode.None;
