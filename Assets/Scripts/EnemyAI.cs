@@ -46,13 +46,18 @@ public class EnemyAI : MonoBehaviour
             dest = player.position;
             ai.destination = dest;
             ai.speed = chaseSpeed;
+
+            //Controls the Animation of the Enemy
             aiAnim.ResetTrigger("walk");
             aiAnim.ResetTrigger("idle");
             aiAnim.SetTrigger("sprint");
+
             float distance = Vector3.Distance(player.position, ai.transform.position);
             if (distance <= catchDistance)
             {
                 player.gameObject.SetActive(false);
+
+                //Controls the Animation of the Enemy
                 aiAnim.ResetTrigger("walk");
                 aiAnim.ResetTrigger("idle");
                 aiAnim.ResetTrigger("sprint");
@@ -66,11 +71,16 @@ public class EnemyAI : MonoBehaviour
             dest = currentDest.position;
             ai.destination = dest;
             ai.speed = walkSpeed;
+
+            //Controls the Animation of the Enemy
             aiAnim.ResetTrigger("sprint");
             aiAnim.ResetTrigger("idle");
             aiAnim.SetTrigger("walk");
+
+
             if (ai.remainingDistance <= ai.stoppingDistance)
             {
+                //Controls the Animation of the Enemy and the stopping distance (attacking distance)
                 aiAnim.ResetTrigger("sprint");
                 aiAnim.ResetTrigger("walk");
                 aiAnim.SetTrigger("idle");
